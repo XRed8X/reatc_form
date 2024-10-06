@@ -1,8 +1,9 @@
 import './App.css';
 import { Card, Container, Row, Col } from 'react-bootstrap';
+import {  Nav } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState } from 'react';
-import {FormsComponent, FormUno, FormDos, FormTres, FormCuatro, FormCinco, FormSeis, FormSiete, FormOcho, FormNueve, FormDiez} from './components/formularios'
+import {FormsComponent, FormUno, FormDos, FormTres, FormCuatro, FormCinco, FormSeis, FormSiete, FormOcho, FormNueve, FormDiez} from './components/Formularios'
 
 function App() {
   const [data, setData] = useState({})
@@ -58,13 +59,17 @@ function App() {
 
   return (
     <>
-    <Container className="mt-3">
-      <h1 className='text-center'>Bolsa de Mayo de Trabajo</h1>
-    <Row>
-        {/* Toma lo que hay dentro de "showCards" y lo pone aqui */}
-        {showCards}
-      </Row>
-    </Container>
+      <Nav className="ml-auto">
+        <Nav.Link href="/">Mayo Forms</Nav.Link>
+        <Nav.Link href="/counter">Mayo Counter</Nav.Link>
+      </Nav>
+      <Container className="mt-3">
+        <h1 className='text-center'>Mayo Formularios</h1>
+        <Row>
+          {/* Toma lo que hay dentro de "showCards" y lo pone aqui */}
+          {showCards}
+        </Row>
+      </Container>
     </>
     
   )
